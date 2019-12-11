@@ -74,12 +74,20 @@ img {
 }
 //Первые экраны
 .first-screen {
-    height: calc(100vh - 140px);
+    height: calc(100vh - 160px);
     display: flex;
+    // height: 100%;
+    border: 1px solid red;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: none;
+    &__wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__slider {
         width: 100%;
         li {
@@ -89,6 +97,8 @@ img {
             align-items: center;
             img {
                 margin: 20px 0;
+                // width: 150px;
+                // height: auto;
             }
         }
         .btn {
@@ -120,7 +130,7 @@ img {
     z-index: 11;
 }
 .intro {
-    height: calc(100vh - 76px);
+    // height: calc(100vh - 76px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,7 +172,7 @@ img {
     left: 0;
     right: 0;
     background-color: #e01c3b;
-    padding: 5px 25px 15px 25px;
+    padding: 0px 25px 10px 25px;
     box-sizing: border-box;
     z-index: 20;
     ul {
