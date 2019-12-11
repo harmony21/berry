@@ -106,6 +106,7 @@ img {
   z-index: 11; }
 
 .intro {
+  height: calc(100vh - 150px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +139,7 @@ img {
   align-items: center;
   position: relative;
   z-index: 10;
-  margin-top: 50px; }
+  margin-top: 25px; }
 
 .btn {
   background-color: #e01c3b;
@@ -153,7 +154,7 @@ img {
     width: auto;
     background-color: transparent;
     color: #e01c3b;
-    margin-top: 35px; }
+    margin-top: 20px; }
 
 .menu {
   position: fixed;
@@ -219,8 +220,8 @@ img {
         background-color: #fff;
         position: absolute;
         z-index: 11;
-        top: -16px;
-        left: -12px;
+        top: -11px;
+        left: -13px;
         border-radius: 40%; }
       .menu li.active a:after {
         content: "";
@@ -229,8 +230,8 @@ img {
         background-color: #fff;
         position: absolute;
         z-index: 11;
-        top: -16px;
-        right: -12px;
+        top: -11px;
+        right: -13px;
         border-radius: 40%; }
     .menu li.active .menu__icon {
       background-color: #fff;
