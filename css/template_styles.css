@@ -1,0 +1,29 @@
+@font-face {
+  font-family: FuturaPT;
+  src: url("fonts/FuturaPT-Book.eot"), url("fonts/FuturaPT-Book.woff"); }
+
+@font-face {
+  font-family: FuturaPT-Light;
+  src: url("fonts/FuturaPT-Light.eot"), url("fonts/FuturaPT-Light.woff"); }
+
+@font-face {
+  font-family: MyriadPro;
+  src: url("fonts/Myriad-Pro_31655.eot"), url("../fonts/MyriadPro-Regular.woff"); }
+
+body {
+  font-family: FuturaPT;
+  width: 100%;
+  min-width: 300px; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    cursor: pointer; }
+
+.container {
+  border: 1px solid red;
+  max-width: 480px;
+  margin: 0 auto; }
+
+img {
+  border: none; }

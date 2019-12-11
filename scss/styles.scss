@@ -1,0 +1,35 @@
+//resolutions
+$laptop: 1366px;
+$tablets: 1024px;
+$min-tablets: 768px;
+$phones: 480px;
+//config
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+}
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+@mixin min-tablets {
+    @media screen and (max-width: $min-tablets) {
+        @content;
+    }
+}
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+body {
+    font-size: 16px;
+    color: #fff;
+}
+p {
+    @include phones {
+        font-size: 12px;
+    }
+}
