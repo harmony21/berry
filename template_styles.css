@@ -139,7 +139,7 @@ img {
   align-items: center;
   position: relative;
   z-index: 10;
-  margin-top: 25px; }
+  margin-top: 10px; }
 
 .btn {
   background-color: #e01c3b;
@@ -154,7 +154,7 @@ img {
     width: auto;
     background-color: transparent;
     color: #e01c3b;
-    margin-top: 20px; }
+    margin-top: 0; }
 
 .menu {
   position: fixed;
