@@ -203,7 +203,7 @@ img {
                 position: relative;
                 &:before {
                     content: "";
-                    width: 20px;
+                    width: 10px;
                     height: 10px;
                     background-color: #fff;
                     position: absolute;
@@ -274,9 +274,10 @@ img {
     z-index: 10;
     padding: 20px 0;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
     span {
-        color: #fff;
+        color: rgba(255,255,255,0.6);
         margin-left: 10px;
     }
 }
@@ -475,6 +476,9 @@ input {
     z-index: 10;
     padding: 15px 10px;
     border-radius: 8px;
+    &--center {
+        text-align: center;
+    }
     h3, p {
         color: #fff;
         margin: 0;
@@ -487,7 +491,7 @@ input {
     .shop {
         padding: 12px;
         box-sizing: border-box;
-        box-shadow: 0px 5px 1px rgba(166,166,166,0.1);
+        box-shadow: 0 0 30px rgba(166,166,166,0.2);
         position: relative;
         margin-top: 40px;
         &:first-child {
@@ -552,9 +556,228 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 240px);
     overflow: hidden;
     .btn {
-        margin-top: 50px;
+        margin-top: 25px;
+    }
+}
+//Все адреса
+.addresses {
+    &__phone {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        span {
+            margin-left: 8px;
+            color: #a6a6a6;
+            font-size: 14px;
+        }
+    }
+    ul {
+        li {
+            padding: 12px;
+            box-sizing: border-box;
+            box-shadow: 0 0 30px rgba(166,166,166,0.2);
+            position: relative;
+            margin-top: 20px;
+            border-radius: 8px;
+            &:after {
+                content: "";
+                display: block;
+                width: 135px;
+                height: 2px;
+                background-color: #dadada;
+                position: absolute;
+                bottom: -12px;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+            p {
+                margin: 0;
+                &:first-child {
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+                &:last-child {
+                    color: #e01c3b;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+//Личный кабинет
+.profile {
+    &__person {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            width: 135px;
+            height: 2px;
+            background-color: #dadada;
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+    &__photo {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 30px rgba(166,166,166,0.2);
+        border-radius: 8px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+        }
+        a {
+            color: #000;
+            font-weight: bold;
+            margin-top: 2px;
+            display: block;
+            font-size: 15px;
+        }
+    }
+    &__links {
+        margin-top: 30px;
+        li {
+            margin-top: 10px;
+            box-shadow: 0 0 30px rgba(166,166,166,0.2);
+            border-radius: 8px;
+            padding: 15px;
+            div {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                span {
+                    &:last-child {
+                        color: #e01c3b;
+                    }
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                color: #000;
+                font-weight: bold;
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+.code {
+    background-color: #f6f6f6;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 10px;
+        background-color: #f6f6f6;
+        left: -15px;
+        height: 100%;
+        top: 0;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 10px;
+        background-color: #f6f6f6;
+        right: -15px;
+        height: 100%;
+        top: 0;
+    }
+}
+//Регистрация
+.registration {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+    }
+    p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #a6a6a6;
+        margin: 20px 0 0 0;
+    }
+    input {
+        border: none;
+        background-color: transparent;
+        font-family: FuturaPT;
+        color: #a6a6a6;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 0 30px rgba(166,166,166,0.2);
+        padding: 15px;
+        border-radius: 8px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    :-moz-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    :-ms-input-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    ::-moz-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    ::-webkit-input-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    .input-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            width: calc(90%/3);
+        }
+    }
+    .btn {
+        background-color: #e01c3b;
+        color: #fff;
+        align-self: center;
+        width: 160px;
+        margin: 20px 0 0 0;
     }
 }
