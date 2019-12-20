@@ -1,7 +1,369 @@
 body {
-  font-size: 16px;
+  font-size: 16px; }
+
+.first-screen__slider h3 {
+  color: #e01c3b;
+  font-size: 14px; }
+
+.first-screen__slider p {
+  font-size: 12px; }
+
+.btn {
+  background-color: #e01c3b;
+  color: #fff; }
+  .btn--inverse {
+    background-color: transparent;
+    color: #e01c3b; }
+
+.menu {
+  background-color: #e01c3b; }
+  .menu a span {
+    color: #fff;
+    font-size: 10px; }
+
+.background {
+  background-color: #e01c3b; }
+
+.search span {
+  color: rgba(255, 255, 255, 0.6); }
+
+input {
   color: #fff; }
 
-@media screen and (max-width: 480px) {
-  p {
-    font-size: 12px; } }
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7); }
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7); }
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7); }
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7); }
+
+:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+:focus::-moz-placeholder {
+  color: transparent; }
+
+:focus:-moz-placeholder {
+  color: transparent; }
+
+:focus:-ms-input-placeholder {
+  color: transparent; }
+
+.slider h3, .slider p {
+  color: #fff; }
+
+.links ul a {
+  color: #a6a6a6; }
+
+.links ul li.active {
+  border-bottom: 2px solid #e01c3b; }
+  .links ul li.active a {
+    color: #000; }
+
+.shop__amount {
+  color: #000; }
+  .shop__amount p span {
+    color: #e01c3b; }
+
+.shop__discount {
+  color: #e01c3b;
+  font-size: 26px;
+  border-bottom: 3px solid #f3f3f3; }
+
+.shop__desc p {
+  font-size: 14px; }
+  .shop__desc p:first-child {
+    color: #a6a6a6; }
+
+.shop__more {
+  background-color: #e01c3b;
+  color: #fff;
+  border: 2px solid #e01c3b;
+  font-size: 14px; }
+
+.actions .shop__text p {
+  font-size: 12px; }
+  .actions .shop__text p:first-child {
+    font-size: 10px;
+    color: #a6a6a6; }
+
+.actions .shop__desc p:first-child {
+  color: #000; }
+
+.addresses__phone span {
+  color: #a6a6a6;
+  font-size: 14px; }
+
+.addresses ul li p:first-child {
+  font-weight: bold;
+  font-size: 13px; }
+
+.addresses ul li p:last-child {
+  color: #e01c3b;
+  font-weight: bold;
+  font-size: 12px; }
+
+.profile__desc p {
+  font-size: 15px; }
+
+.profile__desc a {
+  color: #000;
+  font-size: 15px; }
+
+.profile__links li a {
+  color: #000; }
+
+.code {
+  background-color: #f6f6f6; }
+
+.registration p {
+  font-size: 16px;
+  color: #a6a6a6; }
+
+.registration input {
+  background-color: transparent;
+  color: #a6a6a6; }
+
+.registration :-moz-placeholder {
+  color: rgba(136, 136, 136, 0.7);
+  font-weight: bold; }
+
+.registration :-ms-input-placeholder {
+  color: rgba(136, 136, 136, 0.7);
+  font-weight: bold; }
+
+.registration ::-moz-placeholder {
+  color: rgba(136, 136, 136, 0.7);
+  font-weight: bold; }
+
+.registration ::-webkit-input-placeholder {
+  color: rgba(136, 136, 136, 0.7);
+  font-weight: bold; }
+
+.registration .btn {
+  background-color: #e01c3b;
+  color: #fff; }
+
+.confirm p {
+  color: #000; }
+
+.confirm input {
+  color: #e01c3b;
+  font-size: 32px; }
+
+.confirm :-moz-placeholder {
+  color: #000;
+  font-weight: bold; }
+
+.confirm :-ms-input-placeholder {
+  color: #000;
+  font-weight: bold; }
+
+.confirm ::-moz-placeholder {
+  color: #000;
+  font-weight: bold; }
+
+.confirm ::-webkit-input-placeholder {
+  color: #e01c3b;
+  font-weight: bold; }
+
+.confirm :focus::-webkit-input-placeholder {
+  color: transparent; }
+
+.confirm :focus::-moz-placeholder {
+  color: transparent; }
+
+.confirm :focus:-moz-placeholder {
+  color: transparent; }
+
+.confirm :focus:-ms-input-placeholder {
+  color: transparent; }
+
+.confirm p {
+  color: #a6a6a6;
+  font-size: 14px; }
+
+.status__list li p {
+  font-size: 16px; }
+  .status__list li p:last-child {
+    font-size: 14px; }
+
+.status__list li.active p, .status__list li.active div {
+  color: #e01c3b; }
+
+.status__list li.active p:last-child {
+  font-weight: bold;
+  color: #000; }
+  .status__list li.active p:last-child span:first-child {
+    color: #e01c3b; }
+
+.status__list li.active:before {
+  background-color: #e01c3b; }
+
+.result p {
+  color: #000;
+  font-size: 16px; }
+
+.result div span {
+  font-size: 18px; }
+
+.result div p {
+  color: #000;
+  font-size: 15px; }
+
+.messages .shop__text p {
+  font-size: 14px; }
+  .messages .shop__text p:first-child {
+    color: #a6a6a6; }
+
+.messages .shop__time {
+  color: #a6a6a6;
+  font-size: 14px; }
+
+.messages .shop__number {
+  background-color: #e01c3b;
+  color: #fff; }
+
+.shop-card__desc h3 {
+  font-size: 24px; }
+
+.shop-card__desc p {
+  color: #a6a6a6; }
+
+.shop-card__contacts p {
+  font-size: 14px; }
+
+.shop-card__contacts a {
+  color: #a6a6a6; }
+
+.shop-card__schedule p, .shop-card__schedule a {
+  font-size: 15px; }
+
+.shop-card__schedule p {
+  color: green; }
+
+.shop-card__schedule a {
+  color: #000; }
+
+.shop-card__bonus {
+  color: #000; }
+
+.shop-card__share {
+  color: #000; }
+
+.transactions p {
+  color: #a6a6a6;
+  font-size: 16px; }
+
+.transactions li a p {
+  color: #000; }
+  .transactions li a p span {
+    color: #e01c3b; }
+
+.transactions__date {
+  color: #a6a6a6; }
+
+.share-bonus h3 {
+  color: #fff; }
+
+.share-bonus__wrap input {
+  color: #000; }
+
+.share-bonus__wrap :-moz-placeholder {
+  color: #a6a6a6; }
+
+.share-bonus__wrap :-ms-input-placeholder {
+  color: #a6a6a6; }
+
+.share-bonus__wrap ::-moz-placeholder {
+  color: #a6a6a6; }
+
+.share-bonus__wrap ::-webkit-input-placeholder {
+  color: #a6a6a6; }
+
+.share-bonus__wrap :focus::-webkit-input-placeholder {
+  color: transparent; }
+
+.share-bonus__wrap :focus::-moz-placeholder {
+  color: transparent; }
+
+.share-bonus__wrap :focus:-moz-placeholder {
+  color: transparent; }
+
+.share-bonus__wrap :focus:-ms-input-placeholder {
+  color: transparent; }
+
+.share-bonus__wrap .btn {
+  color: #fff; }
+
+.transaction-more p {
+  font-size: 16px; }
+
+.transaction-more__date {
+  color: #a6a6a6; }
+
+.transaction-more ul li {
+  color: #a6a6a6; }
+
+.shop-card__buttons p {
+  background-color: #fff;
+  font-size: 16px; }
+  .shop-card__buttons p span {
+    color: #e01c3b; }
+
+.review h3 {
+  color: #fff; }
+
+.review textarea {
+  color: #000;
+  font-size: 14px;
+  background-color: #fff; }
+
+.review :-moz-placeholder {
+  color: #a6a6a6; }
+
+.review :-ms-input-placeholder {
+  color: #a6a6a6; }
+
+.review ::-moz-placeholder {
+  color: #a6a6a6; }
+
+.review ::-webkit-input-placeholder {
+  color: #a6a6a6; }
+
+.review :focus::-webkit-input-placeholder {
+  color: transparent; }
+
+.review :focus::-moz-placeholder {
+  color: transparent; }
+
+.review :focus:-moz-placeholder {
+  color: transparent; }
+
+.review :focus:-ms-input-placeholder {
+  color: transparent; }
+
+.review__rating legend {
+  color: #fff;
+  font-size: 12px; }
+
+.chat__item.from p {
+  background-color: #fff;
+  font-size: 14px; }
+
+.chat__item.to p {
+  background-color: #e01c3b;
+  font-size: 14px;
+  color: #fff; }
+
+.chat__time {
+  font-size: 12px;
+  color: #a6a6a6; }
+
+.chat__day {
+  color: #a6a6a6; }

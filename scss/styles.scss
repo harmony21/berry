@@ -26,10 +26,506 @@ $phones: 480px;
 }
 body {
     font-size: 16px;
+}
+.first-screen {
+    &__slider {
+        h3 {
+            color: #e01c3b; 
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
+.btn {
+    background-color: #e01c3b;
+    color: #fff;
+    &--inverse {
+        background-color: transparent;
+        color: #e01c3b;
+    }
+}
+.menu {
+    background-color: #e01c3b;
+    a {
+        span {
+            color: #fff;
+            font-size: 10px;
+        }
+    }
+}
+.background {
+    background-color: #e01c3b;
+}
+.search {
+    span {
+        color: rgba(255,255,255,0.6);
+    }
+}
+input {
     color: #fff;
 }
-p {
-    @include phones {
+:-moz-placeholder {
+    color: rgba(255,255,255,0.7);
+}
+:-ms-input-placeholder {
+    color: rgba(255,255,255,0.7);
+}
+::-moz-placeholder {
+    color: rgba(255,255,255,0.7);
+}
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.7);
+}
+:focus::-webkit-input-placeholder {
+    color: transparent
+}
+:focus::-moz-placeholder {
+    color: transparent
+}
+:focus:-moz-placeholder {
+    color: transparent
+}
+:focus:-ms-input-placeholder {
+    color: transparent
+}
+.slider {
+    h3, p {
+        color: #fff;
+    }
+}
+.links {
+    ul {
+        a {
+            color: #a6a6a6;
+        }
+        li {
+            &.active {
+                border-bottom: 2px solid #e01c3b;
+                a {
+                    color: #000;  
+                }
+
+            }
+        }
+    }
+}
+.shop {
+    &__amount {
+        color: #000;
+        p {
+            span {
+                color: #e01c3b;
+            }
+        }
+    }
+    &__discount {
+        color: #e01c3b;
+        font-size: 26px;
+        border-bottom: 3px solid #f3f3f3;
+    }
+    &__desc {
+        p {
+            font-size: 14px;
+            &:first-child {
+                color: #a6a6a6;
+            }
+        }
+    }
+    &__more {
+        background-color: #e01c3b;
+        color: #fff;
+        border: 2px solid #e01c3b;
+        font-size: 14px;
+    }
+}
+//Страница Акции
+.actions {
+    .shop {
+        &__text {
+            p {
+                font-size: 12px;
+                &:first-child {
+                    font-size: 10px;
+                    color: #a6a6a6;
+                }
+            }
+        }
+        &__desc {
+            p {
+                &:first-child {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+//Все адреса
+.addresses {
+    &__phone {
+        span {
+            color: #a6a6a6;
+            font-size: 14px;
+        }
+    }
+    ul {
+        li {
+            p {
+                &:first-child {
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+                &:last-child {
+                    color: #e01c3b;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+//Личный кабинет
+.profile {
+    &__desc {
+        p {
+            font-size: 15px;
+        }
+        a {
+            color: #000;
+            font-size: 15px;
+        }
+    }
+    &__links {
+        li {
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+.code {
+    background-color: #f6f6f6;
+}
+//Регистрация
+.registration {
+    p {
+        font-size: 16px;
+        color: #a6a6a6;
+    }
+    input {
+        background-color: transparent;
+        color: #a6a6a6;
+    }
+    :-moz-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    :-ms-input-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    ::-moz-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    ::-webkit-input-placeholder {
+        color: rgba(136,136,136,0.7);
+        font-weight: bold;
+    }
+    .btn {
+        background-color: #e01c3b;
+        color: #fff;
+    }
+}
+//Авторизация
+.confirm {
+    p {
+        color: #000;
+    }
+    input {
+        color: #e01c3b;
+        font-size: 32px;
+    }
+    :-moz-placeholder {
+        color: #000;
+        font-weight: bold;
+    }
+    :-ms-input-placeholder {
+        color: #000;
+        font-weight: bold;
+    }
+    ::-moz-placeholder {
+        color: #000;
+        font-weight: bold;
+    }
+    ::-webkit-input-placeholder {
+        color: #e01c3b;
+        font-weight: bold;
+    }
+    :focus::-webkit-input-placeholder {
+        color: transparent
+    }
+    :focus::-moz-placeholder {
+        color: transparent
+    }
+    :focus:-moz-placeholder {
+        color: transparent
+    }
+    :focus:-ms-input-placeholder {
+        color: transparent
+    }
+    p {
+        color: #a6a6a6;
+        font-size: 14px;
+    }
+}
+.status {
+    &__list {
+        li {
+            p {
+                font-size: 16px;
+                &:last-child {
+                    font-size: 14px;
+                }
+            }
+            &.active {
+                p, div {
+                    color: #e01c3b;
+                }
+                p {
+                    &:last-child {
+                        font-weight: bold;
+                        color: #000;
+                        span {
+                            &:first-child {
+                                color: #e01c3b;
+                            }
+                        }
+                    }
+                }
+                &:before {
+                    background-color: #e01c3b;
+                }
+            }
+        }
+    }
+}
+.result {
+    p {
+        color: #000;
+        font-size: 16px;
+    }
+    div {
+        span {
+            font-size: 18px;
+        }
+        p {
+            color: #000;
+            font-size: 15px;
+        }
+    }
+}
+//Сообщения общие
+.messages {
+    .shop {
+        &__text {
+            p {
+                font-size: 14px;
+                &:first-child {
+                    color: #a6a6a6;
+                }
+            }
+        }
+        &__time {
+            color: #a6a6a6;
+            font-size: 14px;
+        }
+        &__number {
+            background-color: #e01c3b;
+            color: #fff;
+        }
+    }
+}
+//Карточка магазина 
+.shop-card {
+    &__desc {
+        h3 {
+            font-size: 24px;
+        }
+        p {
+            color: #a6a6a6;
+        }
+    }
+    &__contacts {
+        p {
+            font-size: 14px;
+        }
+        a {
+            color: #a6a6a6;
+        }
+    }
+    &__schedule {
+        p, a {
+            font-size: 15px;
+        }
+        p {
+            color: green;
+        }
+        a {
+            color: #000;
+        }
+    }
+    &__bonus {
+        color: #000;
+    }
+    &__share {
+        color: #000;
+    }
+}
+.transactions {
+    p {
+        color: #a6a6a6;
+        font-size: 16px;
+    }
+    li {
+        a {
+            p {
+                color: #000;
+                span {
+                    color: #e01c3b;
+                }
+            }
+        }
+    }
+    &__date {
+        color: #a6a6a6;
+    }
+}
+.share-bonus {
+    h3 {
+        color: #fff;
+    }
+    &__wrap {
+        input {
+            color: #000;
+        }
+        :-moz-placeholder {
+            color: #a6a6a6;
+        }
+        :-ms-input-placeholder {
+            color: #a6a6a6;
+        }
+        ::-moz-placeholder {
+            color: #a6a6a6;
+        }
+        ::-webkit-input-placeholder {
+            color: #a6a6a6;
+        }
+        :focus::-webkit-input-placeholder {
+            color: transparent
+        }
+        :focus::-moz-placeholder {
+            color: transparent
+        }
+        :focus:-moz-placeholder {
+            color: transparent
+        }
+        :focus:-ms-input-placeholder {
+            color: transparent
+        }
+        .btn {
+            color: #fff;
+        }
+    }
+}
+//Карточка магазина подробнее
+.transaction-more {
+    p {
+        font-size: 16px;
+    }
+    &__date {
+        color: #a6a6a6;
+    }
+    ul {
+        li {
+            color: #a6a6a6;
+        }
+    }
+}
+.shop-card {
+    &__buttons {
+        p {
+            background-color: #fff;
+            font-size: 16px;
+            span {
+                color: #e01c3b;
+            }
+        }
+    }
+}
+.review {
+    h3 {
+        color: #fff;
+    }
+    textarea {
+        color: #000;
+        font-size: 14px;
+        background-color: #fff;
+    }
+    :-moz-placeholder {
+        color: #a6a6a6;
+    }
+    :-ms-input-placeholder {
+        color: #a6a6a6;
+    }
+    ::-moz-placeholder {
+        color: #a6a6a6;
+    }
+    ::-webkit-input-placeholder {
+        color: #a6a6a6;
+    }
+    :focus::-webkit-input-placeholder {
+        color: transparent
+    }
+    :focus::-moz-placeholder {
+        color: transparent
+    }
+    :focus:-moz-placeholder {
+        color: transparent
+    }
+    :focus:-ms-input-placeholder {
+        color: transparent
+    }
+    &__rating {
+        legend {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+//Сообщения персональные
+.chat {
+    &__item {
+        &.from {
+            p {
+                background-color: #fff;
+                font-size: 14px;
+            }
+        }
+        &.to {
+            p {
+                background-color: #e01c3b;
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+    }
+    &__time {
         font-size: 12px;
+        color: #a6a6a6;
+    }
+    &__day {
+        color: #a6a6a6; 
     }
 }
