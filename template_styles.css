@@ -716,8 +716,6 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .registration .input-wrap input {
-    width: calc(90%/3); }
   .registration .input-wrap__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -753,7 +751,7 @@ input {
   box-shadow: 0 0 30px rgba(166, 166, 166, 0.2);
   padding: 15px;
   border-radius: 8px;
-  margin-top: 10px;
+  margin: 10px 0;
   color: #a6a6a6; }
   .registration select option {
     width: 100px !important;

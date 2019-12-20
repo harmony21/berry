@@ -693,9 +693,9 @@ input {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        input {
-            width: calc(90%/3);
-        }
+        // input {
+        //     width: calc(90%/3);
+        // }
         &__item {
             display: flex;
             width: 48%;
@@ -731,7 +731,7 @@ input {
         box-shadow: 0 0 30px rgba(166,166,166,0.2);
         padding: 15px;
         border-radius: 8px;
-        margin-top: 10px;
+        margin: 10px 0;
         color: #a6a6a6;
         option {
             width: 100px !important;
