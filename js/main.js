@@ -5,13 +5,15 @@ $(document).ready(function() {
     $("body").css("overflow", "hidden"); //отключение прокрутки на ПК
     $('body').bind('touchmove', function(e){e.preventDefault()}) //отключение прокрутки на мобильных устройствах
 
-    //скрытие первых экранов по клику на экран и появление входа
+    var slideItem = $('.first-screen__slider').find('li:eq(2)');
     $('.first-screen').click(function(e) {
-      $(this).fadeOut();
-      $("body").css("overflow", "visible");
-      $('body').unbind('touchmove');
-      $('.intro').fadeIn();
-      $('.intro').css('display', 'flex');
+      if (slideItem.hasClass('active')) {
+        $(this).fadeOut();
+        $("body").css("overflow", "visible");
+        $('body').unbind('touchmove');
+        $('.intro').fadeIn();
+        $('.intro').css('display', 'flex');
+      }
     });
   }
 

@@ -677,11 +677,11 @@ input {
         font-family: FuturaPT;
         width: 100%;
         box-sizing: border-box;
-        box-shadow: 0 0 30px rgba(166,166,166,0.2);
+        box-shadow: 0 0 30px rgba(166,166,166,0.4);
         padding: 15px;
         border-radius: 8px;
         margin-left: 0;
-        margin-top: 10px;
+        margin: 8px 0;
     }
     input[id="phone"] {
         text-align: center;
@@ -728,11 +728,12 @@ input {
         font-family: FuturaPT;
         width: 100%;
         box-sizing: border-box;
-        box-shadow: 0 0 30px rgba(166,166,166,0.2);
+        box-shadow: 0 0 30px rgba(166,166,166,0.4);
         padding: 15px;
         border-radius: 8px;
         margin: 10px 0;
         color: #a6a6a6;
+        font-weight: bold;
         option {
             width: 100px !important;
             font-size: 12px;

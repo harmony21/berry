@@ -3,8 +3,12 @@ $(document).ready(function() {
   slider1.lightSlider({
     item: 1,
     speed: 1500,
-    auto: true,
     mode: 'fade',
-    loop: true,
+    loop: false,
+    enableTouch: false,
   }); 
+
+  $('.first-screen').click(function(e) {
+    slider1.goToNextSlide();
+  });
 });
