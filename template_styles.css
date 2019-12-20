@@ -210,28 +210,28 @@ img {
       position: relative; }
       .menu li.active a:before {
         content: "";
-        width: 10px;
-        height: 10px;
+        width: 2px;
+        height: 2px;
         background-color: #fff;
         position: absolute;
         z-index: 11;
-        top: -11px;
-        left: -13px;
+        top: -4px;
+        left: -11px;
         border-radius: 40%; }
       .menu li.active a:after {
         content: "";
-        width: 10px;
-        height: 10px;
+        width: 2px;
+        height: 2px;
         background-color: #fff;
         position: absolute;
         z-index: 11;
-        top: -11px;
-        right: -13px;
+        top: -4px;
+        right: -11px;
         border-radius: 40%; }
     .menu li.active.message-icon a:before {
-      left: -10px; }
+      left: -7px; }
     .menu li.active.message-icon a:after {
-      right: -10px; }
+      right: -7px; }
     .menu li.active .menu__icon {
       background-color: #fff;
       -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -743,6 +743,23 @@ input {
       width: 10px;
       opacity: 0; }
 
+.registration select {
+  border: none;
+  font-family: FuturaPT;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 30px rgba(166, 166, 166, 0.2);
+  box-shadow: 0 0 30px rgba(166, 166, 166, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #a6a6a6; }
+  .registration select option {
+    width: 100px !important;
+    font-size: 12px;
+    padding: 0px; }
+
 .registration .btn {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -770,11 +787,16 @@ input {
   box-shadow: none;
   text-align: center; }
 
+.bonus p {
+  color: #a6a6a6;
+  font-size: 14px; }
+
 .bonus__title {
   text-transform: uppercase;
   font-size: 22px;
   border-left: 5px solid #e01c3b;
-  padding-left: 15px; }
+  padding-left: 15px;
+  width: 80%; }
 
 .bonus .profile__links li {
   display: -webkit-box;
@@ -794,7 +816,8 @@ input {
     font-weight: bold;
     padding: 0 15px 0 10px;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-size: 14px; }
   .bonus .profile__links li div {
     width: 40px; }
 
@@ -808,6 +831,8 @@ input {
     background-color: #e01c3b; }
   .status p {
     text-transform: uppercase; }
+  .status > p {
+    margin-left: 20px; }
   .status__list li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -900,9 +925,9 @@ input {
           -webkit-box-direction: normal;
           -ms-flex-direction: column;
           flex-direction: column;
-          width: 37%; }
+          width: 110px; }
         .recomendation__scheme ul li div:last-child {
-          width: 63%;
+          width: 55%;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -920,7 +945,7 @@ input {
             bottom: -27px; }
         .recomendation__scheme ul li div p {
           margin: 0;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold; }
           .recomendation__scheme ul li div p:first-child {
             text-transform: uppercase;
@@ -964,7 +989,10 @@ input {
   border-radius: 0 0 8px 8px; }
   .result p {
     color: #000;
-    font-size: 16px; }
+    font-size: 14px;
+    font-weight: bold; }
+  .result > div > span {
+    margin-left: 7px; }
   .result div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -976,14 +1004,16 @@ input {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     .result div span {
-      font-weight: bold; }
-    .result div p {
-      margin: 7px; }
+      font-weight: bold;
+      font-size: 14px; }
     .result div .shop__bonus {
       background-color: #fff;
-      margin-top: 0; }
-    .result div .shop__amount {
-      text-align: center; }
+      margin-top: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .result div .shop__bonus p {
+        margin: 7px; }
 
 .messages__link {
   position: absolute;
