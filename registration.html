@@ -35,10 +35,7 @@
 
                                 <p>Дата рождения</p>
                                 <div class="input-wrap">
-                                    <input type="date" placeholder="Дата, месяц, год">
-                                    <!-- <input type="date" placeholder="Дата">
-                                    <input type="number" placeholder="Месяц">
-                                    <input type="number" placeholder="Год"> -->
+                                    <input placeholder="25 декабря 2019 г." type="text" onfocus="(this.type='date')">
                                 </div>
 
                                 <!--Ваш пол-->
@@ -57,13 +54,53 @@
                                 </div>
 
                                 <input type="email" placeholder="Электронная почта">
-                                <select name="list1">
-                                    <option>Образование</option>
-                                    <option>Высшее</option>
-                                    <option>Среднее</option>
-                                </select>
 
-                                <select name="list2">
+                                <!-- Лейбел, при клике на который открывается селект -->
+                                <label for="select" class="select">
+                                    <!-- Этот инпут отвечает за закрытие селекта при клике за его пределами. Также этот инпут является стандартным значением нашего селекта -->
+                                    <input type="radio" name="list" value="not_changed" id="bg" checked />
+                                    <!-- Этот инпут является переключателем селекта в состояние "открыт" -->
+                                    <input type="radio" name="list" value="not_changed" id="select">
+                                    <!-- Этот див - список параметров селекта, где #text - то, что выводится, когда ничего не выбрано -->
+                                    <div class="items">
+                                        <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта -->
+                                        <input type="radio" name="list" value="first_value" id="list[0]">
+                                        <!-- Название параметра -->
+                                        <label for="list[0]">Высшее</label>
+                                        <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
+                                        <input type="radio" name="list" value="second_value" id="list[1]">
+                                        <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
+                                        <label for="list[1]">Среднее</label>
+                                        <!-- Текст селекта по умолчанию. Выводится тогда, когда ничего не выбрано -->
+                                        <span id="text">Образование</span>
+                                    </div>
+                                </label>
+
+
+
+                                <!-- Лейбел, при клике на который открывается селект -->
+                                <label for="select1" class="select1">
+                                    <!-- Этот инпут отвечает за закрытие селекта при клике за его пределами. Также этот инпут является стандартным значением нашего селекта -->
+                                    <input type="radio" name="list1" value="not_changed" id="bg1" checked />
+                                    <!-- Этот инпут является переключателем селекта в состояние "открыт" -->
+                                    <input type="radio" name="list1" value="not_changed" id="select1">
+                                    <!-- Этот див - список параметров селекта, где #text - то, что выводится, когда ничего не выбрано -->
+                                    <div class="items1">
+                                        <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта -->
+                                        <input type="radio" name="list1" value="first_value" id="list1[0]">
+                                        <!-- Название параметра -->
+                                        <label for="list1[0]">Инженер</label>
+                                        <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
+                                        <input type="radio" name="list1" value="second_value" id="list1[1]">
+                                        <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
+                                        <label for="list1[1]">Учитель</label>
+                                        <!-- Текст селекта по умолчанию. Выводится тогда, когда ничего не выбрано -->
+                                        <span id="text1">Профессия</span>
+                                    </div>
+                                </label>
+                                
+
+                                <!-- <select name="list2">
                                     <option>Профессия</option>
                                     <option>Инженер</option>
                                     <option>Учитель</option>
@@ -73,27 +110,15 @@
                                     <option>Дети</option>
                                     <option>0-5 лет</option>
                                     <option>5-12 лет</option>
-                                </select>
-
-                                <!-- <input type="text" placeholder="Образование"> -->
-                                <!-- <input type="text" placeholder="Профессия">
-                                <input type="text" placeholder="Дети"> -->
+                                </select> -->
 
                                 <p>
-                                    Вступая в Систему "Ягода" путем заполнения данной Анкеты, я выражаю свое 
+                                    &laquo;Вступая в Систему Ягода путем заполнения данной Анкеты, я выражаю свое 
                                     полное и безоговоросноые принятие всех положений Пользовательского соглашения 
-                                    и Политики конфиденциальности Систему "Ягода", а также даю согласие 
+                                    и Политики конфиденциальности Систему Ягода, а также даю согласие 
                                     на обработку персональных данных на условиях Пользовательского соглашения 
-                                    и Политики конфиденциальности Системы "Ягода"
+                                    и Политики конфиденциальности Системы &laquo;Ягода&raquo;&raquo;
                                 </p>
-
-                                <!-- <label>
-                                    <input class="checkbox" type="checkbox" name="checkbox-test" required>
-                                    <span class="checkbox-custom"></span>
-                                    <span class="label">Даю согласие на обработку персональных данных *</span>
-                                </label> -->
-
-
 
                                 <input type="submit" value="Зарегистрироваться" class="btn btn--registration">
                             </form>

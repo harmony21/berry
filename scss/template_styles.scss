@@ -41,6 +41,14 @@ $phones: 480px;
         @content;
     }
 }
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; // locks fields on Safari
+    -khtml-user-select: none; // locks fields on Safari
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;      
+    }
 body {
     font-family: FuturaPT;
     width: 100%;
@@ -291,6 +299,10 @@ input {
     background-color: transparent;
     font-family: FuturaPT;
     margin-left: 10px;
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
 }
 .slider {
     position: relative;
@@ -693,9 +705,6 @@ input {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // input {
-        //     width: calc(90%/3);
-        // }
         &__item {
             display: flex;
             width: 48%;
@@ -723,24 +732,169 @@ input {
             }
         }
     }
-    select {
-        border: none;
-        font-family: FuturaPT;
+    // select {
+    //     border: none;
+    //     font-family: FuturaPT;
+    //     width: 100%;
+    //     box-sizing: border-box;
+    //     box-shadow: 0 0 30px rgba(166,166,166,0.4);
+    //     padding: 15px;
+    //     border-radius: 8px;
+    //     margin: 10px 0;
+    //     color: #a6a6a6;
+    //     font-weight: bold;
+    //     option {
+    //         width: 100px !important;
+    //         font-size: 12px;
+    //         padding: 0px;
+    //     }
+    // }
+
+
+    /* стилизуем стандартный текст лейбела(желательно смотреть этот стиль после .items) */
+
+    #text, #text1
+    {
+        position: absolute;
+        display: block;
+        top: 0;
+        padding-left: 10px;
+    }
+
+    /* Задаем параметры нашего селекта - ширину, высоту и line-height(для центрирования текста по вертикали;этот парметр меньше ширины на 4px, т.к. в нашем блоке есть border размером в 2px со всех сторон) */
+
+    .select, .select1 {
+        input {
+            display: none;
+        }
+            display: inline-block;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            position: relative;
+        }
+
+    /* Это наша стрелочка, показывающая, что селект можно раскрыть */
+
+    .select:before, .select1:before
+        {
+            content: "";
+            display: inline-block;
+            background: url('images/arrow.png');
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            z-index: 2;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            // line-height: 26px;
+            // border: 2px solid #ddd;
+            // transform: rotate(90deg);
+            cursor: pointer;
+        }
+
+    /* Если ничего не выбрано, то наш изначальный текст черного цвета, как и должно быть */
+
+    .select input[name="list"]:not(:checked) ~ #text, .select1 input[name="list1"]:not(:checked) ~ #text1, 
+    {
+        color: #a6a6a6;
+        background: white;
+        font-weight: bold;
+    }
+
+    /* Если же что-то выбрано, то наш текст становится невидимым и встает сверху выбранного параметра, чтобы при клике на него можно было заного открыть селект, что не было реализовано прошлым автором */
+
+    .select input[name="list"]:checked ~ #text
+        {
+        background: transparent;
+        color: transparent;
+        z-index: 2;
+    }
+    .select1 input[name="list1"]:checked ~ #text1 {
+        z-index: 3;
+    }
+
+    /* Стилизация выключенного селекта */
+
+    #select:disabled ~ .items #text, #select1:disabled ~ .items1 #text1
+    {
+        background: #eee;
+    }
+
+    /* Стилизация блока с опциями. min-height сделана для фикса высоты при абсолютном позиционировании, overflow же сделан для фиксированной высоты(см. ниже) */
+
+    .items, .items1
+    {
+        display: block;
+        min-height: 48px;
+        position: absolute;
+        overflow: hidden;
         width: 100%;
-        box-sizing: border-box;
+        cursor: pointer;
         box-shadow: 0 0 30px rgba(166,166,166,0.4);
-        padding: 15px;
         border-radius: 8px;
-        margin: 10px 0;
+        z-index: 2;
+    }
+
+    /* Если наш селект закрыт, то он имеет высоту 30px(сделано для того, чтобы слишком большие надписи не растягивали его в высоту)  */
+
+    #select:not(:checked) ~ .items, #select1:not(:checked) ~ .items1
+    {
+        height: 48px;
+    }
+
+    /* Все лейбелы(названия опций) изначально скрыты */
+
+    .items label, .items1 label
+    {
+        border-top: 1px solid #ddd;
+        display: none;
+        padding-left: 10px;
+        background: white;
+    }
+
+    /* Тут много объяснять не надо - просто выделение при наведении */
+
+    .items label:hover, .items1 label:hover
+    {
+        background: #eee;
+        cursor: pointer;
+    }
+
+    /* Опять же фикс из-за абсолютного позиционирования */
+
+    #select:checked ~ .items,  #select1:checked ~ .items1
+    {
+        padding-top: 48px;
+    }
+    /* Если наш селект открыт, то надо сделать все опции видимыми */
+
+    #select:checked ~ .items label
+    {
+        display: block;
+        color: #a6a6a6;
+    }
+    #select1:checked ~ .items1 label
+    {
+        display: block;
+        color: #a6a6a6;
+    }
+
+    /* Если какая-либо опция была выбрана, то сделать ее видимой(при выборе селект автоматически закроется) */
+
+    .items input:checked + label, .items1 input:checked + label
+    {
+        display: block!important;
+        border: none;
+        background: white;
         color: #a6a6a6;
         font-weight: bold;
-        option {
-            width: 100px !important;
-            font-size: 12px;
-            padding: 0px;
-        }
     }
-    
+ 
+
+
+
     .btn {
         align-self: center;
         width: 160px;
@@ -760,30 +914,6 @@ input {
         }
     }
 }
-// .checkbox {
-//     display: none;
-// }
-// .checkbox-custom {
-//     position: relative;
-//     width: 21px;             
-//     height: 21px;            
-//     background: url("..//images/radio-non-active.png") no-repeat;
-//     cursor: pointer;
-// }
-// .checkbox-custom, .label {
-//     display: inline-block;
-//     vertical-align: middle;
-// }
-// .checkbox:checked + .checkbox-custom::before {
-//     content: "";             
-//     display: block;			 
-//     position: absolute;      
-//     top: 0px; 
-//     right: 2px; 
-//     bottom: 2px; 
-//     left: 0px; 
-//     background: url("..//images/radio-active.png") no-repeat;
-// }
 //Авторизация
 .confirm {
     p {

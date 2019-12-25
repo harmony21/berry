@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: FuturaPT;
   src: url("fonts/FuturaPT-Book.eot"), url("fonts/FuturaPT-Book.woff"); }
@@ -5,6 +6,14 @@
 @font-face {
   font-family: FuturaPT-Light;
   src: url("fonts/FuturaPT-Light.eot"), url("fonts/FuturaPT-Light.woff"); }
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 body {
   font-family: FuturaPT;
@@ -289,7 +298,11 @@ input {
   border: none;
   background-color: transparent;
   font-family: FuturaPT;
-  margin-left: 10px; }
+  margin-left: 10px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
 
 .slider {
   position: relative;
@@ -670,112 +683,173 @@ input {
     height: 100%;
     top: 0; }
 
-.registration__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.registration h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center; }
-
-.registration p {
-  font-weight: bold;
-  margin: 20px 0 0 0; }
-
-.registration input {
-  border: none;
-  font-family: FuturaPT;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
-  box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
-  padding: 15px;
-  border-radius: 8px;
-  margin-left: 0;
-  margin: 8px 0; }
-
-.registration input[id="phone"] {
-  text-align: center; }
-  .registration input[id="phone"].phone--left {
-    text-align: left; }
-
-.registration .input-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .registration .input-wrap__item {
+.registration {
+  /* стилизуем стандартный текст лейбела(желательно смотреть этот стиль после .items) */
+  /* Задаем параметры нашего селекта - ширину, высоту и line-height(для центрирования текста по вертикали;этот парметр меньше ширины на 4px, т.к. в нашем блоке есть border размером в 2px со всех сторон) */
+  /* Это наша стрелочка, показывающая, что селект можно раскрыть */
+  /* Если ничего не выбрано, то наш изначальный текст черного цвета, как и должно быть */
+  /* Если же что-то выбрано, то наш текст становится невидимым и встает сверху выбранного параметра, чтобы при клике на него можно было заного открыть селект, что не было реализовано прошлым автором */
+  /* Стилизация выключенного селекта */
+  /* Стилизация блока с опциями. min-height сделана для фикса высоты при абсолютном позиционировании, overflow же сделан для фиксированной высоты(см. ниже) */
+  /* Если наш селект закрыт, то он имеет высоту 30px(сделано для того, чтобы слишком большие надписи не растягивали его в высоту)  */
+  /* Все лейбелы(названия опций) изначально скрыты */
+  /* Тут много объяснять не надо - просто выделение при наведении */
+  /* Опять же фикс из-за абсолютного позиционирования */
+  /* Если наш селект открыт, то надо сделать все опции видимыми */
+  /* Если какая-либо опция была выбрана, то сделать ее видимой(при выборе селект автоматически закроется) */ }
+  .registration__form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 48%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .registration h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; }
+  .registration p {
+    font-weight: bold;
+    margin: 20px 0 0 0; }
+  .registration input {
+    border: none;
+    font-family: FuturaPT;
+    width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin-top: 8px;
-    padding: 8px 5px;
-    border-radius: 7px; }
-    .registration .input-wrap__item.active {
-      background-color: #e01c3b;
-      color: #fff; }
-      .registration .input-wrap__item.active .sex-icon.male {
-        background-position: 0 -20px; }
-      .registration .input-wrap__item.active .sex-icon.female {
-        background-position: 0 -21px; }
-    .registration .input-wrap__item input {
-      margin-top: 0;
-      width: 10px;
-      opacity: 0; }
-
-.registration select {
-  border: none;
-  font-family: FuturaPT;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
-  box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
-  padding: 15px;
-  border-radius: 8px;
-  margin: 10px 0;
-  color: #a6a6a6;
-  font-weight: bold; }
-  .registration select option {
-    width: 100px !important;
-    font-size: 12px;
-    padding: 0px; }
-
-.registration .btn {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  width: 160px;
-  margin: 20px 0 0 0; }
-
-.registration .sex-icon {
-  margin-top: 0; }
-  .registration .sex-icon.male {
-    width: 18px;
-    height: 20px;
-    background: url("images/man.png"); }
-  .registration .sex-icon.female {
-    width: 18px;
-    height: 21px;
-    background: url("images/woman.png"); }
+    -webkit-box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
+    box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
+    padding: 15px;
+    border-radius: 8px;
+    margin-left: 0;
+    margin: 8px 0; }
+  .registration input[id="phone"] {
+    text-align: center; }
+    .registration input[id="phone"].phone--left {
+      text-align: left; }
+  .registration .input-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .registration .input-wrap__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 48%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-top: 8px;
+      padding: 8px 5px;
+      border-radius: 7px; }
+      .registration .input-wrap__item.active {
+        background-color: #e01c3b;
+        color: #fff; }
+        .registration .input-wrap__item.active .sex-icon.male {
+          background-position: 0 -20px; }
+        .registration .input-wrap__item.active .sex-icon.female {
+          background-position: 0 -21px; }
+      .registration .input-wrap__item input {
+        margin-top: 0;
+        width: 10px;
+        opacity: 0; }
+  .registration #text, .registration #text1 {
+    position: absolute;
+    display: block;
+    top: 0;
+    padding-left: 10px; }
+  .registration .select, .registration .select1 {
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    position: relative; }
+    .registration .select input, .registration .select1 input {
+      display: none; }
+  .registration .select:before, .registration .select1:before {
+    content: "";
+    display: inline-block;
+    background: url("images/arrow.png");
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    cursor: pointer; }
+  .registration .select input[name="list"]:not(:checked) ~ #text, .registration .select1 input[name="list1"]:not(:checked) ~ #text1 {
+    color: #a6a6a6;
+    background: white;
+    font-weight: bold; }
+  .registration .select input[name="list"]:checked ~ #text {
+    background: transparent;
+    color: transparent;
+    z-index: 2; }
+  .registration .select1 input[name="list1"]:checked ~ #text1 {
+    z-index: 3; }
+  .registration #select:disabled ~ .items #text, .registration #select1:disabled ~ .items1 #text1 {
+    background: #eee; }
+  .registration .items, .registration .items1 {
+    display: block;
+    min-height: 48px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
+    box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
+    border-radius: 8px;
+    z-index: 2; }
+  .registration #select:not(:checked) ~ .items, .registration #select1:not(:checked) ~ .items1 {
+    height: 48px; }
+  .registration .items label, .registration .items1 label {
+    border-top: 1px solid #ddd;
+    display: none;
+    padding-left: 10px;
+    background: white; }
+  .registration .items label:hover, .registration .items1 label:hover {
+    background: #eee;
+    cursor: pointer; }
+  .registration #select:checked ~ .items, .registration #select1:checked ~ .items1 {
+    padding-top: 48px; }
+  .registration #select:checked ~ .items label {
+    display: block;
+    color: #a6a6a6; }
+  .registration #select1:checked ~ .items1 label {
+    display: block;
+    color: #a6a6a6; }
+  .registration .items input:checked + label, .registration .items1 input:checked + label {
+    display: block !important;
+    border: none;
+    background: white;
+    color: #a6a6a6;
+    font-weight: bold; }
+  .registration .btn {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 160px;
+    margin: 20px 0 0 0; }
+  .registration .sex-icon {
+    margin-top: 0; }
+    .registration .sex-icon.male {
+      width: 18px;
+      height: 20px;
+      background: url("images/man.png"); }
+    .registration .sex-icon.female {
+      width: 18px;
+      height: 21px;
+      background: url("images/woman.png"); }
 
 .confirm p {
   text-align: center; }
