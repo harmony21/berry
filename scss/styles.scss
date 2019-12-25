@@ -233,6 +233,18 @@ input {
         color: rgba(136,136,136,0.7);
         font-weight: bold;
     }
+    :focus::-webkit-input-placeholder {
+        color: transparent
+    }
+    :focus::-moz-placeholder {
+        color: transparent
+    }
+    :focus:-moz-placeholder {
+        color: transparent
+    }
+    :focus:-ms-input-placeholder {
+        color: transparent
+    }
     .btn {
         background-color: #e01c3b;
         color: #fff;

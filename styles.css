@@ -145,6 +145,18 @@ input {
   color: rgba(136, 136, 136, 0.7);
   font-weight: bold; }
 
+.registration :focus::-webkit-input-placeholder {
+  color: transparent; }
+
+.registration :focus::-moz-placeholder {
+  color: transparent; }
+
+.registration :focus:-moz-placeholder {
+  color: transparent; }
+
+.registration :focus:-ms-input-placeholder {
+  color: transparent; }
+
 .registration .btn {
   background-color: #e01c3b;
   color: #fff; }
