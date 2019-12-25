@@ -753,7 +753,7 @@ input {
 
     /* стилизуем стандартный текст лейбела(желательно смотреть этот стиль после .items) */
 
-    #text, #text1
+    #text, #text1, #text2
     {
         position: absolute;
         display: block;
@@ -763,20 +763,21 @@ input {
 
     /* Задаем параметры нашего селекта - ширину, высоту и line-height(для центрирования текста по вертикали;этот парметр меньше ширины на 4px, т.к. в нашем блоке есть border размером в 2px со всех сторон) */
 
-    .select, .select1 {
+    .select, .select1, .select2 {
         input {
             display: none;
         }
-            display: inline-block;
-            width: 100%;
-            height: 48px;
-            line-height: 48px;
-            position: relative;
-        }
+        display: inline-block;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        position: relative;
+        margin-top: 15px;
+    }
 
     /* Это наша стрелочка, показывающая, что селект можно раскрыть */
 
-    .select:before, .select1:before
+    .select:before, .select1:before, .select2:before
         {
             content: "";
             display: inline-block;
@@ -788,43 +789,48 @@ input {
             width: 24px;
             height: 24px;
             text-align: center;
-            // line-height: 26px;
-            // border: 2px solid #ddd;
-            // transform: rotate(90deg);
             cursor: pointer;
         }
+    .select:before {
+        z-index: 9;
+    }
+    .select1:before {
+        z-index: 7;
+    }
+    .select2:before {
+        z-index: 5;
+    }
 
     /* Если ничего не выбрано, то наш изначальный текст черного цвета, как и должно быть */
 
     .select input[name="list"]:not(:checked) ~ #text, .select1 input[name="list1"]:not(:checked) ~ #text1, 
+    .select2 input[name="list2"]:not(:checked) ~ #text2,
     {
         color: #a6a6a6;
-        background: white;
         font-weight: bold;
     }
 
     /* Если же что-то выбрано, то наш текст становится невидимым и встает сверху выбранного параметра, чтобы при клике на него можно было заного открыть селект, что не было реализовано прошлым автором */
 
-    .select input[name="list"]:checked ~ #text
+    .select input[name="list"]:checked ~ #text, .select1 input[name="list1"]:checked ~ #text1,
+    .select2 input[name="list2"]:checked ~ #text2
         {
         background: transparent;
         color: transparent;
         z-index: 2;
     }
-    .select1 input[name="list1"]:checked ~ #text1 {
-        z-index: 3;
-    }
 
     /* Стилизация выключенного селекта */
 
-    #select:disabled ~ .items #text, #select1:disabled ~ .items1 #text1
+    #select:disabled ~ .items #text, #select1:disabled ~ .items1 #text1,
+    #select2:disabled ~ .items2 #text2
     {
         background: #eee;
     }
 
     /* Стилизация блока с опциями. min-height сделана для фикса высоты при абсолютном позиционировании, overflow же сделан для фиксированной высоты(см. ниже) */
 
-    .items, .items1
+    .items, .items1, .items2
     {
         display: block;
         min-height: 48px;
@@ -834,29 +840,35 @@ input {
         cursor: pointer;
         box-shadow: 0 0 30px rgba(166,166,166,0.4);
         border-radius: 8px;
-        z-index: 2;
+        z-index: 8;
+    }
+    .items1 {
+        z-index: 6;
+    }
+    .items2 {
+        z-index: 4;
     }
 
     /* Если наш селект закрыт, то он имеет высоту 30px(сделано для того, чтобы слишком большие надписи не растягивали его в высоту)  */
 
-    #select:not(:checked) ~ .items, #select1:not(:checked) ~ .items1
+    #select:not(:checked) ~ .items, #select1:not(:checked) ~ .items1,
+    #select2:not(:checked) ~ .items2
     {
         height: 48px;
     }
 
     /* Все лейбелы(названия опций) изначально скрыты */
 
-    .items label, .items1 label
+    .items label, .items1 label, .items2 label
     {
         border-top: 1px solid #ddd;
         display: none;
         padding-left: 10px;
         background: white;
     }
-
     /* Тут много объяснять не надо - просто выделение при наведении */
 
-    .items label:hover, .items1 label:hover
+    .items label:hover, .items1 label:hover, .items2 label:hover
     {
         background: #eee;
         cursor: pointer;
@@ -864,7 +876,7 @@ input {
 
     /* Опять же фикс из-за абсолютного позиционирования */
 
-    #select:checked ~ .items,  #select1:checked ~ .items1
+    #select:checked ~ .items,  #select1:checked ~ .items1, #select2:checked ~ .items2
     {
         padding-top: 48px;
     }
@@ -880,10 +892,15 @@ input {
         display: block;
         color: #a6a6a6;
     }
+    #select2:checked ~ .items2 label
+    {
+        display: block;
+        color: #a6a6a6;
+    }
 
     /* Если какая-либо опция была выбрана, то сделать ее видимой(при выборе селект автоматически закроется) */
 
-    .items input:checked + label, .items1 input:checked + label
+    .items input:checked + label, .items1 input:checked + label, .items2 input:checked + label
     {
         display: block!important;
         border: none;

@@ -762,20 +762,21 @@ input {
         margin-top: 0;
         width: 10px;
         opacity: 0; }
-  .registration #text, .registration #text1 {
+  .registration #text, .registration #text1, .registration #text2 {
     position: absolute;
     display: block;
     top: 0;
     padding-left: 10px; }
-  .registration .select, .registration .select1 {
+  .registration .select, .registration .select1, .registration .select2 {
     display: inline-block;
     width: 100%;
     height: 48px;
     line-height: 48px;
-    position: relative; }
-    .registration .select input, .registration .select1 input {
+    position: relative;
+    margin-top: 15px; }
+    .registration .select input, .registration .select1 input, .registration .select2 input {
       display: none; }
-  .registration .select:before, .registration .select1:before {
+  .registration .select:before, .registration .select1:before, .registration .select2:before {
     content: "";
     display: inline-block;
     background: url("images/arrow.png");
@@ -787,19 +788,25 @@ input {
     height: 24px;
     text-align: center;
     cursor: pointer; }
-  .registration .select input[name="list"]:not(:checked) ~ #text, .registration .select1 input[name="list1"]:not(:checked) ~ #text1 {
+  .registration .select:before {
+    z-index: 9; }
+  .registration .select1:before {
+    z-index: 7; }
+  .registration .select2:before {
+    z-index: 5; }
+  .registration .select input[name="list"]:not(:checked) ~ #text, .registration .select1 input[name="list1"]:not(:checked) ~ #text1,
+  .registration .select2 input[name="list2"]:not(:checked) ~ #text2 {
     color: #a6a6a6;
-    background: white;
     font-weight: bold; }
-  .registration .select input[name="list"]:checked ~ #text {
+  .registration .select input[name="list"]:checked ~ #text, .registration .select1 input[name="list1"]:checked ~ #text1,
+  .registration .select2 input[name="list2"]:checked ~ #text2 {
     background: transparent;
     color: transparent;
     z-index: 2; }
-  .registration .select1 input[name="list1"]:checked ~ #text1 {
-    z-index: 3; }
-  .registration #select:disabled ~ .items #text, .registration #select1:disabled ~ .items1 #text1 {
+  .registration #select:disabled ~ .items #text, .registration #select1:disabled ~ .items1 #text1,
+  .registration #select2:disabled ~ .items2 #text2 {
     background: #eee; }
-  .registration .items, .registration .items1 {
+  .registration .items, .registration .items1, .registration .items2 {
     display: block;
     min-height: 48px;
     position: absolute;
@@ -809,18 +816,23 @@ input {
     -webkit-box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
     box-shadow: 0 0 30px rgba(166, 166, 166, 0.4);
     border-radius: 8px;
-    z-index: 2; }
-  .registration #select:not(:checked) ~ .items, .registration #select1:not(:checked) ~ .items1 {
+    z-index: 8; }
+  .registration .items1 {
+    z-index: 6; }
+  .registration .items2 {
+    z-index: 4; }
+  .registration #select:not(:checked) ~ .items, .registration #select1:not(:checked) ~ .items1,
+  .registration #select2:not(:checked) ~ .items2 {
     height: 48px; }
-  .registration .items label, .registration .items1 label {
+  .registration .items label, .registration .items1 label, .registration .items2 label {
     border-top: 1px solid #ddd;
     display: none;
     padding-left: 10px;
     background: white; }
-  .registration .items label:hover, .registration .items1 label:hover {
+  .registration .items label:hover, .registration .items1 label:hover, .registration .items2 label:hover {
     background: #eee;
     cursor: pointer; }
-  .registration #select:checked ~ .items, .registration #select1:checked ~ .items1 {
+  .registration #select:checked ~ .items, .registration #select1:checked ~ .items1, .registration #select2:checked ~ .items2 {
     padding-top: 48px; }
   .registration #select:checked ~ .items label {
     display: block;
@@ -828,7 +840,10 @@ input {
   .registration #select1:checked ~ .items1 label {
     display: block;
     color: #a6a6a6; }
-  .registration .items input:checked + label, .registration .items1 input:checked + label {
+  .registration #select2:checked ~ .items2 label {
+    display: block;
+    color: #a6a6a6; }
+  .registration .items input:checked + label, .registration .items1 input:checked + label, .registration .items2 input:checked + label {
     display: block !important;
     border: none;
     background: white;
