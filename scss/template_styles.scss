@@ -56,6 +56,12 @@ body {
 }
 a {
     text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; // locks fields on Safari
+    -khtml-user-select: none; // locks fields on Safari
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
     &:hover {
         cursor: pointer;
     }
@@ -1323,6 +1329,7 @@ input {
         span {
             width: 80%;
             margin-left: 5px;
+            font-size: 14px;
         }
     }
     &__share {
@@ -1387,6 +1394,13 @@ input {
             padding: 15px;
             margin-top: 15px;
             box-shadow: 0 10px 30px rgba(166,166,166,0.2);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none; // locks fields on Safari
+            -khtml-user-select: none; // locks fields on Safari
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;  
+            margin-left: 0;
         }
         .btn {
             align-self: center;
