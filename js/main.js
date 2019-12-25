@@ -63,9 +63,9 @@ $(document).ready(function() {
   });
 
   //замена иконки микрофона на play
-  $('.message-area__left').find('textarea').click(function(e) {
-    console.log('ok');
-  });
+  // $('.message-area__left').find('textarea').click(function(e) {
+  //   $('.message-area__send-btn').html("<img src='images/play.png' alt=''>");
+  // });
 
   $("#phone").mask("+7 (9 9 9) 9 9 9 - 9 9 - 9 9");
   

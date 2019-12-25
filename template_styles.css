@@ -724,7 +724,8 @@ input {
     padding: 15px;
     border-radius: 8px;
     margin-left: 0;
-    margin: 8px 0; }
+    margin: 8px 0;
+    -webkit-user-select: text; }
   .registration input[id="phone"] {
     text-align: center; }
     .registration input[id="phone"].phone--left {
@@ -739,6 +740,8 @@ input {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    .registration .input-wrap input {
+      height: 48px; }
     .registration .input-wrap__item {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -762,7 +765,8 @@ input {
       .registration .input-wrap__item input {
         margin-top: 0;
         width: 10px;
-        opacity: 0; }
+        opacity: 0;
+        height: auto; }
   .registration #text, .registration #text1, .registration #text2 {
     position: absolute;
     display: block;
@@ -1604,4 +1608,13 @@ input {
     background-color: #e01c3b;
     border-radius: 8px;
     width: 50px;
-    height: 50px; }
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
