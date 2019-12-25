@@ -41,14 +41,9 @@ $phones: 480px;
         @content;
     }
 }
-* {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; // locks fields on Safari
-    -khtml-user-select: none; // locks fields on Safari
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;      
-    }
+textarea:focus, input:focus, a {
+    outline: none;
+}
 body {
     font-family: FuturaPT;
     width: 100%;
@@ -56,12 +51,6 @@ body {
 }
 a {
     text-decoration: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; // locks fields on Safari
-    -khtml-user-select: none; // locks fields on Safari
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;  
     &:hover {
         cursor: pointer;
     }
@@ -305,10 +294,6 @@ input {
     background-color: transparent;
     font-family: FuturaPT;
     margin-left: 10px;
-    -ms-user-select: none; 
-    -moz-user-select: none; 
-    -webkit-user-select: none; 
-    user-select: none; 
 }
 .slider {
     position: relative;
@@ -1394,12 +1379,6 @@ input {
             padding: 15px;
             margin-top: 15px;
             box-shadow: 0 10px 30px rgba(166,166,166,0.2);
-            -webkit-touch-callout: none;
-            -webkit-user-select: none; // locks fields on Safari
-            -khtml-user-select: none; // locks fields on Safari
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;  
             margin-left: 0;
         }
         .btn {
