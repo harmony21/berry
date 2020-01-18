@@ -11,8 +11,6 @@ $(document).ready(function() {
         $(this).fadeOut();
         $("body").css("overflow", "visible");
         $('body').unbind('touchmove');
-        $('.intro').fadeIn();
-        $('.intro').css('display', 'flex');
       }
     });
   }
@@ -23,7 +21,9 @@ $(document).ready(function() {
     // $('.inside-page--registration').fadeIn();
 
   $('.btn-without-login').click(function(e) {
-    $('.intro').fadeOut();
+    $('.first-screen').fadeOut();
+    $("body").css("overflow", "visible");
+    $('body').unbind('touchmove');
     $('.shop__bonus').css('display', 'none');
     $('.main-page').fadeIn();
     var slider = $("#lightSlider2");
@@ -67,9 +67,60 @@ $(document).ready(function() {
   //   $('.message-area__send-btn').html("<img src='images/play.png' alt=''>");
   // });
 
+  // Валидация формы при регистрации
+  $('#user-date').hover(function() {
+    $('#user-date').attr('type', 'date');
+  })
+
+  function validate_form () {    
+    valid = true;
+
+    if ((($("#man").prop('checked')) == false) && (($("#woman").prop('checked')) == false))
+    {
+      $('.input-wrap').css('border', '2px solid red;');
+      valid = false;
+    }
+
+    if ((($("#high").prop('checked')) == false) && (($("#middle").prop('checked')) == false))
+    {
+      console.log('false');
+      $('.select').css({
+        'border': '1px solid red',
+        'border-radius': '8px'
+      });
+      valid = false;
+    }
+
+    if ((($("#engeener").prop('checked')) == false) && (($("#teacher").prop('checked')) == false))
+    {
+      console.log('false');
+      $('.select1').css({
+        'border': '1px solid red',
+        'border-radius': '8px'
+      });
+      valid = false;
+    }
+
+    if ((($("#small").prop('checked')) == false) && (($("#teenager").prop('checked')) == false))
+    {
+      console.log('false');
+      $('.select2').css({
+        'border': '1px solid red',
+        'border-radius': '8px'
+      });
+      valid = false;
+    }
+  }
+
+  $('.btn--registration').click(function(e) {
+    validate_form();
+  });
+
+
   $("#phone").mask("+7 (9 9 9) 9 9 9 - 9 9 - 9 9");
   
   $('.shop-card__share').fancybox();
   $('.shop-card__buttons').find('.btn').fancybox();
   $('.chat__item.leave-review').fancybox();
+
 });

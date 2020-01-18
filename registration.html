@@ -30,25 +30,21 @@
                             <h3>Регистрация</h3>
 
                             <form action="" class="registration__form">
-                                <input id="phone" class="phone--left" placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _">
-                                <input type="text" placeholder="Ваше имя">
-
-                                <p>Дата рождения</p>
-                                <div class="input-wrap">
-                                    <input type="date" placeholder="25 декабря 2019 г." >
-                                </div>
+                                <input id="phone" required="required" class="phone--left" placeholder="+7 _ _ _ - _ _ _ - _ _ - _ _" id='user-phone'>
+                                <input type="text" placeholder="Ваше имя" id="user-name" required="required">
+                                <input type="text" required="required" placeholder="Дата рождения" id="user-date" onfocus="(this.type='date')">
 
                                 <!--Ваш пол-->
                                 <p>Ваш пол</p>
                                 <div class="input-wrap">
                                     <div class="input-wrap__item active">
                                         <div class="sex-icon male"></div>
-                                        <input name="sex" type="radio" value="male" checked="checked">
+                                        <input name="sex" type="radio" value="male" checked="checked" id="man">
                                         <label for="sex">Мужской</label>
                                     </div>
                                     <div class="input-wrap__item">
                                         <div class="sex-icon female"></div>
-                                        <input name="sex" type="radio" value="female">
+                                        <input name="sex" type="radio" value="female" id="woman">
                                         <label for="sex">Женский</label>
                                     </div>
                                 </div>
@@ -58,19 +54,19 @@
                                 <!-- Лейбел, при клике на который открывается селект -->
                                 <label for="select" class="select">
                                     <!-- Этот инпут отвечает за закрытие селекта при клике за его пределами. Также этот инпут является стандартным значением нашего селекта -->
-                                    <input type="radio" name="list" value="not_changed" id="bg" checked />
+                                    <input type="radio" name="list" value="not_changed" id="bg"/>
                                     <!-- Этот инпут является переключателем селекта в состояние "открыт" -->
                                     <input type="radio" name="list" value="not_changed" id="select">
                                     <!-- Этот див - список параметров селекта, где #text - то, что выводится, когда ничего не выбрано -->
                                     <div class="items">
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта -->
-                                        <input type="radio" name="list" value="first_value" id="list[0]">
+                                        <input type="radio" name="list" value="first_value" id="high">
                                         <!-- Название параметра -->
-                                        <label for="list[0]">Высшее</label>
+                                        <label for="high">Высшее</label>
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
-                                        <input type="radio" name="list" value="second_value" id="list[1]">
+                                        <input type="radio" name="list" value="second_value" id="middle">
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
-                                        <label for="list[1]">Среднее</label>
+                                        <label for="middle">Среднее</label>
                                         <!-- Текст селекта по умолчанию. Выводится тогда, когда ничего не выбрано -->
                                         <span id="text">Образование</span>
                                     </div>
@@ -87,13 +83,13 @@
                                     <!-- Этот див - список параметров селекта, где #text - то, что выводится, когда ничего не выбрано -->
                                     <div class="items1">
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта -->
-                                        <input type="radio" name="list1" value="first_value" id="list1[0]">
+                                        <input type="radio" name="list1" value="first_value" id="engeener">
                                         <!-- Название параметра -->
-                                        <label for="list1[0]">Инженер</label>
+                                        <label for="engeener">Инженер</label>
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
-                                        <input type="radio" name="list1" value="second_value" id="list1[1]">
+                                        <input type="radio" name="list1" value="second_value" id="teacher">
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
-                                        <label for="list1[1]">Учитель</label>
+                                        <label for="teacher">Учитель</label>
                                         <!-- Текст селекта по умолчанию. Выводится тогда, когда ничего не выбрано -->
                                         <span id="text1">Профессия</span>
                                     </div>
@@ -109,13 +105,13 @@
                                     <!-- Этот див - список параметров селекта, где #text - то, что выводится, когда ничего не выбрано -->
                                     <div class="items2">
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта -->
-                                        <input type="radio" name="list2" value="first_value" id="list2[0]">
+                                        <input type="radio" name="list2" value="first_value" id="small">
                                         <!-- Название параметра -->
-                                        <label for="list2[0]">0-5 лет</label>
+                                        <label for="small">0-5 лет</label>
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
-                                        <input type="radio" name="list2" value="second_value" id="list2[1]">
+                                        <input type="radio" name="list2" value="second_value" id="teenager">
                                         <!-- Инпут, при клике на который происходит выбор параметра и сворачивание селекта[1] -->
-                                        <label for="list2[1]">5-12 лет</label>
+                                        <label for="teenager">5-12 лет</label>
                                         <!-- Текст селекта по умолчанию. Выводится тогда, когда ничего не выбрано -->
                                         <span id="text2">Дети</span>
                                     </div>

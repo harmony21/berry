@@ -85,31 +85,40 @@ img {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      padding: 20px 0; }
       .first-screen__slider li img {
         margin: 10px 0;
-        width: 70%; }
+        width: 60%; }
     .first-screen__slider .btn {
-      margin: 0 auto;
-      display: block;
-      width: 180px; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 180px;
+      padding: 0;
+      height: 35px; }
     .first-screen__slider h3, .first-screen__slider p {
-      text-align: center; }
+      text-align: center;
+      margin: 10px 0; }
     .first-screen__slider h3 {
       text-transform: uppercase;
-      width: 80%;
-      margin: 0 auto; }
+      width: 80%; }
     .first-screen__slider p {
       font-weight: bold;
       width: 85%;
-      margin: 5px auto; }
+      margin: 5px auto 10px auto; }
 
 .logo {
   position: relative;
   z-index: 11; }
 
 .intro {
-  height: calc(100vh - 150px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,12 +131,12 @@ img {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  display: none; }
+  align-items: center; }
   .intro--registration {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    height: calc(100vh - 150px); }
 
 .main-pic {
   width: 100%;
@@ -169,7 +178,7 @@ img {
   .btn:nth-child(2) {
     margin-top: 10px; }
   .btn--inverse {
-    width: auto;
+    width: 100%;
     margin-top: 0; }
 
 .menu {
@@ -180,7 +189,7 @@ img {
   padding: 0px 25px 10px 25px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  z-index: 20; }
+  z-index: 100; }
   .menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -718,7 +727,7 @@ input {
     text-align: center; }
   .registration p {
     font-weight: bold;
-    margin: 20px 0 0 0; }
+    margin: 7px 0 0 0; }
   .registration input {
     border: none;
     font-family: FuturaPT;
@@ -746,7 +755,8 @@ input {
     justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 7px; }
     .registration .input-wrap input {
       height: 48px; }
     .registration .input-wrap__item {
@@ -785,7 +795,7 @@ input {
     height: 48px;
     line-height: 48px;
     position: relative;
-    margin-top: 15px; }
+    margin: 7px 0; }
     .registration .select input, .registration .select1 input, .registration .select2 input {
       display: none; }
   .registration .select:before, .registration .select1:before, .registration .select2:before {
@@ -861,6 +871,19 @@ input {
     background: white;
     color: #a6a6a6;
     font-weight: bold; }
+  .registration #select, .registration #select1, .registration #select2 {
+    width: 100%;
+    display: block;
+    position: absolute;
+    line-height: 48px;
+    height: 48px;
+    margin: 0; }
+  .registration #select, .registration .select {
+    z-index: 60; }
+  .registration #select1, .registration .select1 {
+    z-index: 40; }
+  .registration #select2, .registration .select2 {
+    z-index: 20; }
   .registration .btn {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;

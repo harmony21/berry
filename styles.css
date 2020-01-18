@@ -13,7 +13,8 @@ body {
   color: #fff; }
   .btn--inverse {
     background-color: transparent;
-    color: #e01c3b; }
+    color: #e01c3b;
+    font-size: 14px; }
 
 .menu {
   background-color: #e01c3b; }

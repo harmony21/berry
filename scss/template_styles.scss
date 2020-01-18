@@ -97,28 +97,32 @@ img {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px 0;
             img {
                 margin: 10px 0;
-                width: 70%;
+                width: 60%;
             }
         }
         .btn {
-            margin: 0 auto;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 180px;
+            padding: 0;
+            height: 35px;
         }
         h3, p {
             text-align: center;
+            margin: 10px 0;
         }
         h3 {
             text-transform: uppercase; 
             width: 80%;
-            margin: 0 auto;
         }
         p {
             font-weight: bold;
             width: 85%;
-            margin: 5px auto;
+            margin: 5px auto 10px auto;
         }
     }
 }
@@ -128,14 +132,15 @@ img {
     z-index: 11;
 }
 .intro {
-    height: calc(100vh - 150px);
+    // height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    // display: none;
     &--registration {
         display: flex;
+        height: calc(100vh - 150px);
     }
 }
 .main-pic {
@@ -166,7 +171,7 @@ img {
         margin-top: 10px;
     }
     &--inverse {
-        width: auto;
+        width: 100%;
         margin-top: 0;
     }
 }
@@ -177,7 +182,7 @@ img {
     right: 0; 
     padding: 0px 25px 10px 25px;
     box-sizing: border-box;
-    z-index: 20;
+    z-index: 100;
     ul {
         display: flex;
         align-items: center;
@@ -684,7 +689,7 @@ input {
     }
     p {
         font-weight: bold;
-        margin: 20px 0 0 0;
+        margin: 7px 0 0 0;
     }
     input {
         border: none;
@@ -710,6 +715,7 @@ input {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 7px;
         input {
             height: 48px;
         }
@@ -763,7 +769,7 @@ input {
         height: 48px;
         line-height: 48px;
         position: relative;
-        margin-top: 15px;
+        margin: 7px 0;
     }
 
     /* Это наша стрелочка, показывающая, что селект можно раскрыть */
@@ -898,6 +904,24 @@ input {
         background: white;
         color: #a6a6a6;
         font-weight: bold;
+    }
+
+    #select, #select1, #select2 {
+        width: 100%;
+        display: block;
+        position: absolute;
+        line-height: 48px;
+        height: 48px; 
+        margin: 0;
+    }
+    #select, .select {
+        z-index: 60;
+    }
+    #select1, .select1 {
+        z-index: 40;
+    }
+    #select2, .select2 {
+        z-index: 20;
     }
  
     .btn {

@@ -5,10 +5,6 @@ $(document).ready(function() {
     speed: 1500,
     mode: 'fade',
     loop: false,
-    enableTouch: false,
+    enableTouch: true,
   }); 
-
-  $('.first-screen').click(function(e) {
-    slider1.goToNextSlide();
-  });
 });
