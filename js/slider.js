@@ -3,7 +3,8 @@ $(document).ready(function() {
   slider1.lightSlider({
     item: 1,
     loop: false,
-    enableTouch: false,
+    enableDrag: false,
+    enableTouch: true,
     freeMove: false,
   }); 
 });
