@@ -132,12 +132,10 @@ img {
     z-index: 11;
 }
 .intro {
-    // height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // display: none;
     &--registration {
         display: flex;
         height: calc(100vh - 150px);

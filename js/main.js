@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("body").css("overflow", "hidden"); //отключение прокрутки на ПК
     $('body').bind('touchmove', function(e){e.preventDefault()}) //отключение прокрутки на мобильных устройствах
 
-    var slideItem = $('.first-screen__slider').find('li:eq(2)');
+    var slideItem = $('.first-screen__slider').find('li:eq(4)');
     $('.first-screen').click(function(e) {
       if (slideItem.hasClass('active')) {
         $(this).fadeOut();
