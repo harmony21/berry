@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("body").css("overflow", "hidden"); //отключение прокрутки на ПК
     $('body').bind('touchmove', function(e){e.preventDefault()}) //отключение прокрутки на мобильных устройствах
 
-    var slideItem = $('.first-screen__slider').find('li:eq(4)');
+    var slideItem = $('.first-screen__slider').find('li:last+1');
     $('.first-screen').click(function(e) {
       if (slideItem.hasClass('active')) {
         $(this).fadeOut();
@@ -112,9 +112,22 @@ $(document).ready(function() {
     }
   }
 
+
+  $('.select-hidden').click(function(e) {
+    var items = $(this).find('.hidden-items'),
+    itemsCount = items.children('label').length; 
+    if (itemsCount > 8) {
+      var itemsHeight = items.outerHeight();
+      items.css("margin-bottom", itemsHeight*0.2);
+    }
+    
+  });
+
   $('.btn--registration').click(function(e) {
     validate_form();
   });
+
+  
 
 
   $("#phone").mask("+7 (9 9 9) 9 9 9 - 9 9 - 9 9");
