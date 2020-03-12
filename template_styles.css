@@ -831,7 +831,6 @@ input {
   .registration .items, .registration .items1, .registration .items2 {
     display: block;
     min-height: 48px;
-    position: absolute;
     overflow: hidden;
     width: 100%;
     cursor: pointer;

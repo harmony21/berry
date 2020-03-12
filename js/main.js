@@ -117,8 +117,10 @@ $(document).ready(function() {
     var items = $(this).find('.hidden-items'),
     itemsCount = items.children('label').length; 
     if (itemsCount > 8) {
-      var itemsHeight = items.outerHeight();
-      items.css("margin-bottom", itemsHeight*0.2);
+      var itemsHeight = items.outerHeight(),
+      margin = itemsHeight*0.2;
+      items.css("margin-bottom", margin);
+      console.log(margin);
     }
     
   });
